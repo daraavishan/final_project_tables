@@ -10,11 +10,9 @@
   <ul class="list-group list-group-flush">
     <% @user.user_top_artist_images.each do |user_top_artist_image| %>
       <li class="list-group-item d-flex align-items-center justify-content-between">
-        <!-- Show link start -->
         <a href="/user_top_artist_images/<%= user_top_artist_image.id %>">
           <%= user_top_artist_image.user_id %>
         </a>
-        <!-- Show link end -->
 
       </li>
     <% end %>

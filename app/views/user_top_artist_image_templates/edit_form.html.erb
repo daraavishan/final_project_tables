@@ -4,24 +4,16 @@
 
 <hr>
 
-<!-- Form user_top_artist_image start -->
 <form action="/update_user_top_artist_image/<%= @user_top_artist_image.id %>" method="post">
-<!-- Form user_top_artist_image end -->
 
-  <!-- Label and input for user_id start -->
-  <!-- Label and input for user_id end -->
 
-  <!-- Label and input for image_url start -->
   <div class="form-group">
     <label for="image_url">
       Image url
     </label>
 
-    <!-- Input for image_url start -->
     <input type="text" id="image_url" name="image_url" class="form-control" value="<%= @user_top_artist_image.image_url %>">
-    <!-- Input for image_url end -->
   </div>
-  <!-- Label and input for image_url end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Update user top artist image

@@ -11,7 +11,6 @@
         </a>
       </div>
 
-      <!-- Edit link user_top_artist_image start -->
       <div class="col">
         <% if current_user == @user_top_artist_image.user %>
           <a href="/user_top_artist_images/<%= @user_top_artist_image.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
@@ -19,9 +18,7 @@
           </a>
         <% end %>
       </div>
-      <!-- Edit link user_top_artist_image end -->
 
-      <!-- Delete link user_top_artist_image start -->
       <div class="col">
         <% if current_user == @user_top_artist_image.user %>
           <a href="/delete_user_top_artist_image/<%= @user_top_artist_image.id %>" class="btn btn-block btn-sm btn-outline-secondary">
@@ -29,14 +26,12 @@
           </a>
         <% end %>
       </div>
-      <!-- Delete link user_top_artist_image end -->
     </div>
 
     <dl>
       <dt>
         User
       </dt>
-      <!-- Display user_id start -->
       <dd>
         <% if @user_top_artist_image.user.present? %>
           <a href="/users/<%= @user_top_artist_image.user_id %>">
@@ -44,37 +39,28 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display user_id end -->
 
       <dt>
         Image url
       </dt>
-      <!-- Display image_url start -->
       <dd>
         <%= @user_top_artist_image.image_url %>
       </dd>
-      <!-- Display image_url end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@user_top_artist_image.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@user_top_artist_image.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->
