@@ -10,7 +10,7 @@ class UserTopArtistImagesController < ApplicationController
   end
 
   def index
-    @user_top_artist_images = UserTopArtistImage.all
+    @user_top_artist_images = UserTopArtistImage.page(params[:page]).per(10)
 
     render("user_top_artist_image_templates/index.html.erb")
   end
