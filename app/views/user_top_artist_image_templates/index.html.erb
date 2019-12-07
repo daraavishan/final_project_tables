@@ -58,7 +58,11 @@
 
         <!-- Display user_top_artist_image.user_id start -->
         <td>
-          <%= user_top_artist_image.user.email %>
+          <% if user_top_artist_image.user.present? %>
+            <a href="/users/<%= user_top_artist_image.user.id %>">
+              <%= user_top_artist_image.user.email %>
+            </a>
+          <% end %>
         </td>
         <!-- Display user_top_artist_image.user_id end -->
 
