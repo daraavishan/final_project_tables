@@ -41,7 +41,7 @@ class UserTopArtistImagesController < ApplicationController
   def update_row
     @user_top_artist_image = UserTopArtistImage.find(params.fetch("id_to_modify"))
 
-    @user_top_artist_image.user_id = params.fetch("user_id")
+    
     @user_top_artist_image.image_url = params.fetch("image_url")
 
     if @user_top_artist_image.valid?
