@@ -1,0 +1,73 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      User top artist image #<%= @user_top_artist_image.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/user_top_artist_images" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link user_top_artist_image start -->
+      <div class="col">
+        <a href="/user_top_artist_images/<%= @user_top_artist_image.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit user top artist image
+        </a>
+      </div>
+      <!-- Edit link user_top_artist_image end -->
+
+      <!-- Delete link user_top_artist_image start -->
+      <div class="col">
+        <a href="/delete_user_top_artist_image/<%= @user_top_artist_image.id %>" class="btn btn-block btn-outline-secondary">
+          Delete user top artist image
+        </a>
+      </div>
+      <!-- Delete link user_top_artist_image end -->
+    </div>
+
+    <dl>
+      <dt>
+        User
+      </dt>
+      <!-- Display user_id start -->
+      <dd>
+        <%= @user_top_artist_image.user_id %>
+      </dd>
+      <!-- Display user_id end -->
+
+      <dt>
+        Image url
+      </dt>
+      <!-- Display image_url start -->
+      <dd>
+        <%= @user_top_artist_image.image_url %>
+      </dd>
+      <!-- Display image_url end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@user_top_artist_image.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@user_top_artist_image.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->

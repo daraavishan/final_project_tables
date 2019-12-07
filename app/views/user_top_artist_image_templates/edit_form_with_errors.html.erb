@@ -1,0 +1,53 @@
+<!-- Validation failure messages -->
+<% if @user_top_artist_image.errors.any? %>
+  <% @user_top_artist_image.errors.full_messages.each do |message| %>
+    <div class="alert">
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<h1>
+  Edit user top artist image #<%= @user_top_artist_image.id %>
+</h1>
+
+<hr>
+
+<!-- Form user_top_artist_image start -->
+<form action="/update_user_top_artist_image/<%= @user_top_artist_image.id %>" method="post">
+<!-- Form user_top_artist_image end -->
+
+  <!-- Label and input for user_id start -->
+  <div class="form-group">
+    <label for="user_id">
+      User
+    </label>
+
+    <!-- Input for user_id start -->
+    <input type="text" id="user_id" name="user_id" class="form-control" value="<%= @user_top_artist_image.user_id %>">
+    <!-- Input for user_id end -->
+  </div>
+  <!-- Label and input for user_id end -->
+
+  <!-- Label and input for image_url start -->
+  <div class="form-group">
+    <label for="image_url">
+      Image url
+    </label>
+
+    <!-- Input for image_url start -->
+    <input type="text" id="image_url" name="image_url" class="form-control" value="<%= @user_top_artist_image.image_url %>">
+    <!-- Input for image_url end -->
+  </div>
+  <!-- Label and input for image_url end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update user top artist image
+  </button>
+</form>
+
+<hr>
+
+<a href="/user_top_artist_images">
+  Go back
+</a>
