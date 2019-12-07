@@ -10,7 +10,8 @@ class UserTopArtistImagesController < ApplicationController
   end
 
   def index
-    @user_top_artist_images = UserTopArtistImage.page(params[:page]).per(10)
+    @q = UserTopArtistImage.ransack(params[:q])
+    @user_top_artist_images = @q.result(:distinct => true).includes(:user).page(params[:page]).per(10)
 
     render("user_top_artist_image_templates/index.html.erb")
   end
