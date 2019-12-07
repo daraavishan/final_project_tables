@@ -27,6 +27,7 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_user_top_artist_image/:id_to_remove", { :controller => "user_top_artist_images", :action => "destroy_row" })
+  get("/delete_user_top_artist_image_from_user/:id_to_remove", { :controller => "user_top_artist_images", :action => "destroy_row_from_user" })
 
   #------------------------------
 

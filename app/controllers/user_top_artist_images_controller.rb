@@ -53,6 +53,14 @@ class UserTopArtistImagesController < ApplicationController
     end
   end
 
+  def destroy_row_from_user
+    @user_top_artist_image = UserTopArtistImage.find(params.fetch("id_to_remove"))
+
+    @user_top_artist_image.destroy
+
+    redirect_to("/users/#{@user_top_artist_image.user_id}", notice: "UserTopArtistImage deleted successfully.")
+  end
+
   def destroy_row
     @user_top_artist_image = UserTopArtistImage.find(params.fetch("id_to_remove"))
 
