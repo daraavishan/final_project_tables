@@ -13,17 +13,21 @@
 
       <!-- Edit link user_top_artist_image start -->
       <div class="col">
-        <a href="/user_top_artist_images/<%= @user_top_artist_image.id %>/edit" class="btn btn-block btn-outline-secondary">
-          Edit user top artist image
-        </a>
+        <% if current_user == @user_top_artist_image.user %>
+          <a href="/user_top_artist_images/<%= @user_top_artist_image.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
+            Edit user_top_artist_image
+          </a>
+        <% end %>
       </div>
       <!-- Edit link user_top_artist_image end -->
 
       <!-- Delete link user_top_artist_image start -->
       <div class="col">
-        <a href="/delete_user_top_artist_image/<%= @user_top_artist_image.id %>" class="btn btn-block btn-outline-secondary">
-          Delete user top artist image
-        </a>
+        <% if current_user == @user_top_artist_image.user %>
+          <a href="/delete_user_top_artist_image/<%= @user_top_artist_image.id %>" class="btn btn-block btn-sm btn-outline-secondary">
+            Delete user_top_artist_image
+          </a>
+        <% end %>
       </div>
       <!-- Delete link user_top_artist_image end -->
     </div>
